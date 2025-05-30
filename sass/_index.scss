@@ -1,0 +1,522 @@
+* {
+  box-sizing: border-box;
+}
+
+.active {
+  color: #0027d5;
+}
+.br {
+  display: none;
+}
+img {
+  object-fit: cover;
+  display: block;
+}
+body {
+  line-height: 1.5rem;
+  font-family: "Noto Sans TC", sans-serif;
+}
+h2 {
+  font-size: 64px;
+  line-height: 150%;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+.mb-1 {
+  margin-bottom: 8px;
+}
+.mb-2 {
+  margin-bottom: 16px;
+}
+.mb-3 {
+  margin-bottom: 24px;
+}
+.nav {
+  text-align: center;
+  padding: 24px 0;
+  a {
+    color: black;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 150%;
+    margin-right: 40px;
+  }
+}
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: black solid 1px;
+  border-bottom: black solid 1px;
+  picture {
+    width: 50%;
+    img {
+      width: 100%;
+    }
+  }
+  .hero-section2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true");
+    .name {
+      font-size: 120px;
+      line-height: 150%;
+      color: #0027d5;
+      font-weight: 900;
+    }
+    .job {
+      color: #0027d5;
+      line-height: 150%;
+      font-size: 28px;
+      font-weight: 700;
+    }
+  }
+  .detail {
+    width: 800px;
+    padding: 140px 40px;
+    margin-top: -160px;
+    background: white;
+    margin-left: calc(100% - 960px);
+    font-size: 28px;
+    line-height: 150%;
+    .first-p {
+      margin-bottom: 16px;
+    }
+    .icons {
+      font-size: 24px;
+      margin-top: 16px;
+      color: #0027d5;
+      i {
+        padding: 10px;
+      }
+    }
+  }
+}
+.container {
+  width: 1296px;
+  margin: 0 auto;
+  .content-title {
+    font-size: 64px;
+    line-height: 150%;
+    font-weight: 700;
+    margin-bottom: 32px;
+  }
+  .service {
+    margin: 0 110px;
+    display: flex;
+    margin-bottom: 64px;
+  }
+  .service-reverse {
+    flex-direction: row-reverse;
+  }
+  .service-title {
+    font-size: 28px;
+    line-height: 150%;
+    margin-bottom: 8px;
+  }
+  .service-detail {
+    width: 480px;
+    background: white;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    margin-left: -50px;
+    padding: 0 24px;
+  }
+  .deco {
+    border: #0027d5 solid 2.5px;
+    width: 40px;
+    margin-top: 42px;
+    margin-left: 5px;
+    margin-bottom: 18px;
+  }
+  .service-detail-reverse {
+    width: 480px;
+    background: white;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    margin-right: -50px;
+    padding: 0 24px;
+    position: relative;
+  }
+  .content-remark {
+    font-size: 28px;
+    line-height: 150%;
+    font-weight: 700;
+    text-align: end;
+    margin-bottom: 80px;
+  }
+}
+.blog {
+  position: relative;
+  .title {
+    margin-top: 80px;
+  }
+  .left-arrow {
+    font-size: 44px;
+    position: absolute;
+    left: -68px;
+    top: 50%;
+    color: #b2bef2;
+  }
+  .right-arrow {
+    font-size: 44px;
+    position: absolute;
+    right: -24px;
+    top: 50%;
+    color: #0027d5;
+  }
+}
+.blog-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 80px 24px;
+  .card {
+    width: 31%;
+    margin-bottom: 80px;
+  }
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .date {
+    margin: 10px 0;
+  }
+  .tag {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #0027d5;
+    .hint {
+      background: #0027d5;
+      color: white;
+      font-size: 16px;
+      padding: 6px 12px;
+      border-radius: 40px;
+    }
+  }
+  h3 {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 150%;
+    margin-bottom: 20px;
+  }
+  .read-more {
+    display: block;
+    background-color: white;
+    border: solid black 1px;
+    padding: 8px 0;
+    text-align: center;
+    border-radius: 100px;
+    margin-top: 20px;
+    width: 96px;
+    font-size: 16px;
+  }
+  a {
+    text-decoration: none;
+  }
+  p {
+    line-height: 150%;
+  }
+  .card-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.case {
+  margin-bottom: 80px;
+  .case-up {
+    margin-bottom: 40px;
+    display: flex;
+    .img-container {
+      width: 100%;
+      background: #ededed;
+      padding: 24px;
+      img {
+        width: 100%;
+      }
+    }
+    .card1 {
+      width: 100%;
+      background: white;
+      padding: 80px 40px;
+      margin-left: -200px;
+      margin-top: 29px;
+    }
+    .card2 {
+      width: 100%;
+      background: #f5f5f5;
+      padding: 80px 40px;
+      margin-top: -100px;
+      margin-left: 24px;
+    }
+    .btn {
+      font-weight: 700;
+      padding: 8px 16px;
+      color: #0027d5;
+      border: #0027d5 solid;
+      border-radius: 40px;
+      margin-top: 24px;
+    }
+  }
+  .case-down {
+    padding: 24px;
+    width: 100%;
+    background: #f5f5f5;
+    display: flex;
+    gap: 24px;
+    img {
+      width: 80px;
+    }
+    h3 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    i {
+      color: #0027d5;
+    }
+    .detail {
+      color: #4b4b4b;
+    }
+    button {
+      border-radius: 40px;
+      margin-top: 20px;
+      height: 40px;
+      padding: 8px 16px;
+      color: #4b4b4b;
+      border: 1px solid black;
+    }
+    li {
+      height: 100%;
+    }
+  }
+}
+.newsletter {
+  margin-bottom: 80px;
+  display: flex;
+  picture {
+    width: 50%;
+  }
+  .newsletter-right {
+    width: 50%;
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .newsletter-detail {
+    background: white;
+    padding: 80px;
+    .remark {
+      font-size: 20px;
+    }
+    form {
+      margin: 0 !important;
+    }
+    input {
+      padding: 8px 16px;
+      background: #f1f1f1;
+      border: 0;
+      width: 100%;
+      font-size: 20px;
+    }
+    .btn {
+      background: white;
+      font-weight: 700;
+      padding: 8px 16px;
+      color: #0027d5;
+      border: #0027d5 solid;
+      border-radius: 40px;
+      margin-top: 24px;
+    }
+    .subscribe {
+      color: #0027d5;
+      border: #0027d5 solid !important;
+      margin-top: 24px;
+      font-weight: 700;
+      background: white;
+      border-radius: 40px !important;
+      width: 96px !important;
+      font-size: 16px;
+      margin: 24px 0 !important;
+    }
+  }
+}
+.contact {
+  margin-bottom: 80px;
+  .item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px black;
+    padding: 17px 0;
+    .contact-email {
+      display: flex;
+    }
+    .email {
+      text-decoration: underline;
+    }
+    .icon {
+      width: 24px;
+    }
+    .item-detail {
+      display: flex;
+    }
+  }
+}
+.footer {
+  text-align: center;
+  padding: 24px 0;
+  font-weight: 500;
+  background: white;
+}
+
+@media (max-width: 576px) {
+  body {
+    background: #fbfbfb;
+  }
+  .br {
+    display: block;
+  }
+  .header {
+    margin-bottom: 64px;
+    display: block;
+    img {
+      width: 100%;
+    }
+    .hero-section2 {
+      padding: 24px 0;
+      width: 100%;
+      display: block;
+      text-align: center;
+      .name {
+        font-size: 52px;
+      }
+    }
+    .detail {
+      width: 100%;
+      margin-top: 0;
+      margin-left: 0;
+      padding: 40px 24px;
+    }
+  }
+  .container {
+    width: 100%;
+    .service-img {
+      width: 100%;
+      object-fit: contain;
+      padding: 0 12px;
+    }
+    .content-title {
+      font-size: 48px;
+      text-align: center;
+    }
+    .service {
+      display: block;
+      margin: 0;
+      margin-bottom: 32px;
+    }
+    .service-detail {
+      width: 100%;
+      margin: 0;
+    }
+    .service-detail-reverse {
+      width: 100%;
+    }
+    .content-remark {
+      padding: 0 12px;
+    }
+  }
+  .blog {
+    padding: 0 12px;
+    .last-next-btn {
+      text-align: end;
+      margin-bottom: 64px;
+    }
+    .left-arrow,
+    .right-arrow {
+      position: static;
+    }
+    .left-arrow {
+      margin-right: 24px;
+    }
+  }
+  .blog-content {
+    display: block;
+    .card {
+      width: 100%;
+      padding: 0 12px;
+      margin-bottom: 32px;
+    }
+    .d-none {
+      display: none;
+    }
+  }
+  .case {
+    padding: 0 12px;
+    h2 {
+      width: 80%;
+      margin-top: 64px;
+    }
+    .case-up {
+      display: block;
+      .card1 {
+        margin: 0;
+      }
+      .card2 {
+        margin: 0;
+      }
+    }
+    .case-down {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      button {
+        margin-top: 16px;
+      }
+    }
+  }
+  .newsletter {
+    display: block;
+    img {
+      width: 100%;
+    }
+    .newsletter-right {
+      width: 100%;
+      padding: 12px;
+    }
+    .newsletter-detail {
+      padding: 40px 24px;
+      h2 {
+        font-size: 48px;
+      }
+      .btn {
+        margin-top: 0;
+      }
+    }
+  }
+  .contact {
+    margin-bottom: 64px;
+    padding: 0 12px;
+    .item {
+      display: block;
+      .contact-email {
+        display: block;
+      }
+      .email {
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
