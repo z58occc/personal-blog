@@ -1,4 +1,6 @@
-@import "reset";
-@import "index";
-@import "blog";
-@import "blog-detail";
+@import "./base/reset";
+@import "./base/base";
+@import "./layout/layout";
+@import "./pages/index";
+@import "./pages/blog";
+@import "./pages/blog-detail";

@@ -1,0 +1,54 @@
+:root {
+  --warning:yellow;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #fbfbfb;
+}
+
+.active {
+  color: #0027d5;
+}
+.br {
+  display: none;
+}
+img {
+  object-fit: cover;
+  display: block;
+}
+body {
+  line-height: 1.5rem;
+  font-family: "Noto Sans TC", sans-serif;
+}
+h2 {
+  font-size: 64px;
+  line-height: 150%;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+.mb-1 {
+  margin-bottom: 8px;
+}
+.mb-2 {
+  margin-bottom: 16px;
+}
+.mb-3 {
+  margin-bottom: 24px;
+}
+a{
+  color: #0027d5;
+}
+.text-decoration-none{
+  text-decoration: none;
+}
+.text-secondary{
+  color: black;
+}
+
+button:hover{
+  background: var(--warning) !important;
+  border: white !important;
+  cursor: pointer;
+}

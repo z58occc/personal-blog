@@ -47,9 +47,17 @@ table {
   border-spacing: 0;
 }
 
+:root {
+  --warning:yellow;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+body {
+  background: #fbfbfb;
 }
 
 .active {
@@ -90,6 +98,53 @@ h2 {
   margin-bottom: 24px;
 }
 
+a {
+  color: #0027d5;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.text-secondary {
+  color: black;
+}
+
+button:hover {
+  background: var(--warning) !important;
+  border: white !important;
+  cursor: pointer;
+}
+
+.footer {
+  text-align: center;
+  padding: 24px 0;
+  font-weight: 500;
+  background: white;
+}
+
+.big-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 80px 0;
+}
+.big-footer .email {
+  font-weight: 500;
+  font-size: 32px;
+}
+.big-footer .icons {
+  color: #0027d5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+  font-size: 24px;
+}
+
 .nav {
   text-align: center;
   padding: 24px 0;
@@ -118,7 +173,7 @@ h2 {
 .header picture img {
   width: 100%;
 }
-.header .hero-section2 {
+.header .hero-section {
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -135,13 +190,13 @@ h2 {
           align-items: center;
   background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true");
 }
-.header .hero-section2 .name {
+.header .hero-section .name {
   font-size: 120px;
   line-height: 150%;
   color: #0027d5;
   font-weight: 900;
 }
-.header .hero-section2 .job {
+.header .hero-section .job {
   color: #0027d5;
   line-height: 150%;
   font-size: 28px;
@@ -306,7 +361,7 @@ h2 {
 .blog-content p {
   line-height: 150%;
 }
-.blog-content .card-2 {
+.blog-content .card-secondary {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -329,35 +384,35 @@ h2 {
 .case {
   margin-bottom: 80px;
 }
-.case .case-up {
+.case .case-main {
   margin-bottom: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.case .case-up .img-container {
+.case .case-main .img-container {
   width: 100%;
   background: #ededed;
   padding: 24px;
 }
-.case .case-up .img-container img {
+.case .case-main .img-container img {
   width: 100%;
 }
-.case .case-up .card1 {
+.case .case-main .card-primary {
   width: 100%;
   background: white;
   padding: 80px 40px;
   margin-left: -200px;
   margin-top: 29px;
 }
-.case .case-up .card2 {
+.case .case-main .card-secondary {
   width: 100%;
   background: #f5f5f5;
   padding: 80px 40px;
   margin-top: -100px;
   margin-left: 24px;
 }
-.case .case-up .btn {
+.case .case-main .btn {
   font-weight: 700;
   padding: 8px 16px;
   color: #0027d5;
@@ -365,7 +420,7 @@ h2 {
   border-radius: 40px;
   margin-top: 24px;
 }
-.case .case-down {
+.case .case-wrapper {
   padding: 24px;
   width: 100%;
   background: #f5f5f5;
@@ -374,21 +429,21 @@ h2 {
   display: flex;
   gap: 24px;
 }
-.case .case-down img {
+.case .case-wrapper img {
   width: 80px;
 }
-.case .case-down h3 {
+.case .case-wrapper h3 {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 8px;
 }
-.case .case-down i {
+.case .case-wrapper i {
   color: #0027d5;
 }
-.case .case-down .detail {
+.case .case-wrapper .detail {
   color: #4b4b4b;
 }
-.case .case-down button {
+.case .case-wrapper button {
   border-radius: 40px;
   margin-top: 20px;
   height: 40px;
@@ -396,7 +451,7 @@ h2 {
   color: #4b4b4b;
   border: 1px solid black;
 }
-.case .case-down li {
+.case .case-wrapper li {
   height: 100%;
 }
 
@@ -409,7 +464,7 @@ h2 {
 .newsletter picture {
   width: 50%;
 }
-.newsletter .newsletter-right {
+.newsletter .detail-box {
   width: 50%;
   background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true");
   display: -webkit-box;
@@ -464,6 +519,7 @@ h2 {
   margin-bottom: 80px;
 }
 .contact .item {
+  color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -490,13 +546,24 @@ h2 {
   display: flex;
 }
 
-.footer {
-  text-align: center;
-  padding: 24px 0;
-  font-weight: 500;
-  background: white;
+@media (max-width: 1296px) {
+  .container {
+    width: 70%;
+  }
+  .container .service {
+    display: block;
+    margin: 0;
+  }
+  .container .service img {
+    width: 100%;
+  }
+  .newsletter img {
+    width: 100%;
+  }
+  .header .hero-section .name {
+    font-size: 36px;
+  }
 }
-
 @media (max-width: 576px) {
   body {
     background: #fbfbfb;
@@ -511,13 +578,13 @@ h2 {
   .header img {
     width: 100%;
   }
-  .header .hero-section2 {
+  .header .hero-section {
     padding: 24px 0;
     width: 100%;
     display: block;
     text-align: center;
   }
-  .header .hero-section2 .name {
+  .header .hero-section .name {
     font-size: 52px;
   }
   .header .detail {
@@ -586,16 +653,16 @@ h2 {
     width: 80%;
     margin-top: 64px;
   }
-  .case .case-up {
+  .case .case-main {
     display: block;
   }
-  .case .case-up .card1 {
+  .case .case-main .card-primary {
     margin: 0;
   }
-  .case .case-up .card2 {
+  .case .case-main .card-secondary {
     margin: 0;
   }
-  .case .case-down {
+  .case .case-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -605,7 +672,7 @@ h2 {
             flex-direction: column;
     gap: 24px;
   }
-  .case .case-down button {
+  .case .case-wrapper button {
     margin-top: 16px;
   }
   .newsletter {
@@ -614,7 +681,7 @@ h2 {
   .newsletter img {
     width: 100%;
   }
-  .newsletter .newsletter-right {
+  .newsletter .detail-box {
     width: 100%;
     padding: 12px;
   }
@@ -641,11 +708,7 @@ h2 {
     margin-bottom: 8px;
   }
 }
-body {
-  background: #fbfbfb;
-}
-
-.header .hero-section3 {
+.header .section-secondary {
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -663,19 +726,19 @@ body {
   background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true");
   padding: 0 80px;
 }
-.header .hero-section3 .name {
+.header .section-secondary .name {
   font-size: 120px;
   line-height: 150%;
   color: #0027d5;
   font-weight: 900;
 }
-.header .hero-section3 .job {
+.header .section-secondary .job {
   color: #0027d5;
   line-height: 150%;
   font-size: 28px;
   font-weight: 700;
 }
-.header .hero-section4 {
+.header .hero-blog {
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -692,46 +755,46 @@ body {
           align-items: start;
   padding: 0 24px;
 }
-.header .hero-section4 .name {
+.header .hero-blog .name {
   font-size: 120px;
   line-height: 150%;
   color: #0027d5;
   font-weight: 900;
 }
-.header .hero-section4 .job {
+.header .hero-blog .job {
   color: #0027d5;
   line-height: 150%;
   font-size: 28px;
   font-weight: 700;
 }
-.header .hero-section4 .card img {
+.header .hero-blog .card img {
   width: 100%;
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.header .hero-section4 .card .date {
+.header .hero-blog .card .date {
   margin: 10px 0;
 }
-.header .hero-section4 .card .tag {
+.header .hero-blog .card .tag {
   margin: 10px 0;
   font-size: 20px;
   color: #0027d5;
 }
-.header .hero-section4 .card .tag .hint {
+.header .hero-blog .card .tag .hint {
   background: #0027d5;
   color: white;
   font-size: 16px;
   padding: 6px 12px;
   border-radius: 40px;
 }
-.header .hero-section4 .card h3 {
+.header .hero-blog .card h3 {
   font-size: 28px;
   font-weight: bold;
   line-height: 150%;
   margin-bottom: 20px;
 }
-.header .hero-section4 .card .read-more {
+.header .hero-blog .card .read-more {
   display: block;
   background-color: white;
   border: solid black 1px;
@@ -742,13 +805,13 @@ body {
   width: 96px;
   font-size: 16px;
 }
-.header .hero-section4 .card a {
+.header .hero-blog .card a {
   text-decoration: none;
 }
-.header .hero-section4 .card p {
+.header .hero-blog .card p {
   line-height: 150%;
 }
-.header .hero-section4 .card .card-2 {
+.header .hero-blog .card .card-secondary {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -760,7 +823,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.header .hero-section4 .card p {
+.header .hero-blog .card p {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -783,6 +846,7 @@ body {
   width: 400px;
   padding: 16px 56px;
   border-radius: 40px;
+  font-size: 24px;
 }
 .blog .blog-wrap {
   display: -webkit-box;
@@ -848,7 +912,7 @@ body {
 .blog .blog-wrap p {
   line-height: 150%;
 }
-.blog .blog-wrap .card-2 {
+.blog .blog-wrap .card-secondary {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -888,39 +952,25 @@ body {
   text-align: center;
 }
 
-.big-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 80px 0;
+@media (max-width: 1296px) {
+  .header .section-secondary .name {
+    font-size: 36px;
+  }
+  .big-footer {
+    display: block;
+  }
 }
-.big-footer .email {
-  font-weight: 500;
-  font-size: 32px;
-}
-.big-footer .icons {
-  color: #0027d5;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 24px;
-  font-size: 24px;
-}
-
 @media (max-width: 576px) {
-  .header .hero-section3 {
+  .header .section-secondary {
     padding: 24px;
     width: 100%;
     display: block;
     text-align: start;
   }
-  .header .hero-section3 .name {
+  .header .section-secondary .name {
     font-size: 52px;
   }
-  .header .hero-section4 {
+  .header .hero-blog {
     width: 100%;
     padding: 48px 12px;
     border-bottom: solid black 2px;
@@ -935,6 +985,9 @@ body {
     display: block;
   }
   .blog .blog-wrap .card {
+    width: 100%;
+  }
+  .blog .page .page-num {
     width: 100%;
   }
   footer .big-footer {
@@ -1029,6 +1082,14 @@ body {
   font-size: 24px;
 }
 
+@media (max-width: 1296px) {
+  .content {
+    width: 100%;
+  }
+  .end img {
+    width: 100%;
+  }
+}
 @media (max-width: 576px) {
   .content {
     width: 100%;

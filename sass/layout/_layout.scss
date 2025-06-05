@@ -1,0 +1,22 @@
+.footer {
+  text-align: center;
+  padding: 24px 0;
+  font-weight: 500;
+  background: white;
+}
+
+.big-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 0;
+  .email {
+    font-weight: 500;
+    font-size: 32px;
+  }
+  .icons {
+    color: #0027d5;
+    display: flex;
+    gap: 24px;
+    font-size: 24px;
+  }
+}
